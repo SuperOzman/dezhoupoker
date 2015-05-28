@@ -3,9 +3,8 @@
 DIR=`pwd`
 cd ${DIR}/game
 rm -rf works
-git clone https://github.com/nju525/dzpk.git
-mv dzpk works
-cd works/makeproject
+git clone https://github.com/SuperOzman/dezhoupoker.git
+cd dezhoupoker/makeproject
 make
 cd ${DIR}/game
 sh dist_check_and_run.sh
