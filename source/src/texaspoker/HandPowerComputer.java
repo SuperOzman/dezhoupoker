@@ -1,3 +1,5 @@
+package texaspoker;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -24,16 +26,37 @@ public class HandPowerComputer {
 	private int[] countSuit = new int[4];//计算每个花色的数量
 	private int[] countNumber = new int[15];//计算每种数字的数量
 	
-	public HandPowerComputer(List<Card> handCards, List<Card> communityCards) {
-		this.handCards = handCards;
-		this.communityCards = communityCards;
-		cards.addAll(handCards);
-		cards.addAll(communityCards);
-	}
+//	public HandPowerComputer(List<Card> handCards, List<Card> communityCards) {
+//		this.handCards = handCards;
+//		this.communityCards = communityCards;
+//		cards.addAll(handCards);
+//		if(communityCards != null)
+//			cards.addAll(communityCards);
+//	}
 	
 	public void add(Card c){
 		cards.add(c);
 		communityCards.add(c);
+	}
+	
+	public void addHandCard(Card card){
+		cards.add(card);
+		this.handCards.add(card);
+	}
+	
+	public List<Card> getHandCards(){
+		return handCards;
+	}
+	
+	public List<Card> getCommunityCards(){
+		return this.communityCards;
+	}
+	
+	public void clear()
+	{
+		cards.clear();
+		communityCards.clear();
+		handCards.clear();
 	}
 	
 	private void count(){
@@ -80,12 +103,12 @@ public class HandPowerComputer {
 		int HP = 0;
 		if(cards.size()==5||cards.size()==6){
 			if(hasPotentialFlush()){
-				if(intersection(potentialFlush, handCards)==2) HP=2;
-				else if(intersection(potentialFlush, handCards)==1) HP=1;
+				if(intersection(potentialFlush, handCards)==2) HP+=2;
+				else if(intersection(potentialFlush, handCards)==1) HP+=1;
 			}
 			if(hasPotentialStraight()){
-				if(intersection(potentialStraight, handCards)==2) HP=2;
-				else if(intersection(potentialFlush, handCards)==1) HP=1;
+				if(intersection(potentialStraight, handCards)==2) HP+=2;
+				else if(intersection(potentialFlush, handCards)==1) HP+=1;
 			}
 			System.out.println(HP);
 		}	
@@ -550,4 +573,3 @@ public class HandPowerComputer {
 		return flag;
 	}
 }
-

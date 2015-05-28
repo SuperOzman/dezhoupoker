@@ -88,7 +88,7 @@ public class PostFlopAction {
 		//同花顺action
 		if(handPower>=80){
 			if(handPower%10>=2){
-				if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+				if(state.raiseCost<state.myRestJetton) return "raise  " + 2*state.BB;
 				else return "all_in";
 			}else if(handPower%10==1){
 				if(state.numGuaranteed==0) return "check";
@@ -104,7 +104,7 @@ public class PostFlopAction {
 		//四条Action
 		else if(handPower>=70){
 			if(handPower%10==1){
-				if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+				if(state.raiseCost<state.myRestJetton) return "raise  " + 2*state.BB;
 				else return "all_in";
 			}else{
 				if(state.numGuaranteed==0) return "check";
@@ -114,7 +114,7 @@ public class PostFlopAction {
 		//葫芦Action
 		else if(handPower>=60){
 			if(handPower%10==3){
-				if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+				if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 				else return "all_in";
 			}else if(handPower%10==2){
 				if(state.numGuaranteed==0) return "check";
@@ -143,7 +143,7 @@ public class PostFlopAction {
 			else if(numberOfPairs==1){
 				if(handPower%10==3){
 					if(Math.random()>0.3){
-						if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+						if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 						else return "all_in";
 					}
 					else{
@@ -163,7 +163,7 @@ public class PostFlopAction {
 			}
 			else{
 				if(handPower%10==3){
-					if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+					if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 					else return "all_in";
 				}
 				else if(handPower%10==2){
@@ -193,7 +193,7 @@ public class PostFlopAction {
 			else if(numberOfPairs==1 || numberOfSameSuit==3){
 				if(handPower%10==3){
 					if(Math.random()>0.5){
-						if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+						if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 						else return "all_in";
 					}
 					else{
@@ -213,7 +213,7 @@ public class PostFlopAction {
 			}
 			else{
 				if(handPower%10==3){
-						if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+						if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 						else return "all_in";
 				}
 				else if(handPower%10==2){
@@ -251,7 +251,7 @@ public class PostFlopAction {
 			else if(twoCardsToStraight || numberOfSameSuit==3){
 				if(handPower%10==3){
 					if(Math.random()>0.75){
-						if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+						if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 						else return "all_in";
 					}
 					else{
@@ -277,7 +277,7 @@ public class PostFlopAction {
 			}
 			else{
 				if(handPower%10==3){
-						if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+						if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 						else return "all_in";
 				}
 				else if(handPower%10==2){
@@ -287,7 +287,7 @@ public class PostFlopAction {
 						else return "fold";
 					}
 					else{
-						if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+						if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 						else return "all_in";
 					}
 				}
@@ -319,7 +319,7 @@ public class PostFlopAction {
 			else if(twoCardsToStraight || numberOfSameSuit==3){
 				if(handPower%10==3){
 					if(Math.random()>0.5){
-						if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+						if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 						else return "all_in";
 					}
 					else{
@@ -339,7 +339,7 @@ public class PostFlopAction {
 			}
 			else{
 				if(handPower%10==3){
-						if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+						if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 						else return "all_in";
 				}
 				else if(handPower%10==2){
@@ -349,7 +349,7 @@ public class PostFlopAction {
 						else return "fold";
 					}
 					else{
-						if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+						if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 						else return "all_in";
 					}
 				}
@@ -381,7 +381,7 @@ public class PostFlopAction {
 			else if(twoCardsToStraight || numberOfSameSuit==3){
 				if(handPower%10==3){
 					if(Math.random()>0.5){
-						if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+						if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 						else return "all_in";
 					}
 					else{
@@ -401,7 +401,7 @@ public class PostFlopAction {
 			}
 			else{
 				if(handPower%10==3){
-						if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+						if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 						else return "all_in";
 				}
 				else if(handPower%10==2){
@@ -411,7 +411,7 @@ public class PostFlopAction {
 						else return "fold";
 					}
 					else{
-						if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+						if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 						else return "all_in";
 					}
 				}
@@ -424,7 +424,7 @@ public class PostFlopAction {
 		//高牌Action
 		else{
 			if(handPower==2){
-				if(state.raiseCost<state.myRestJetton) return "raise" + 2*state.BB;
+				if(state.raiseCost<state.myRestJetton) return "raise " + 2*state.BB;
 				else return "all_in";
 			}
 			else if(handPower==1){

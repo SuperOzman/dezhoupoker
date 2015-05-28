@@ -5,6 +5,7 @@
  * @parameter  
  * @return  
  */
+package texaspoker;
 public class State {
 	public static final int PREFLOP = 1;
 	public static final int FLOP = 2;
@@ -20,22 +21,23 @@ public class State {
 	public int numRaisePlayer;//rasie的玩家数
 	public int numCallPlayer;//call的玩家数
 	public int numAllInPlayer;//all_in的玩家数
-	public boolean isFirstRoundBet = true;
 	/*
 	 * 小盲位numInpot-1,大盲位numInpot-2,依此次类推直到button位置为0
 	 * 计算我的位置数
 	 */
-	public int myPositin;//我的位置  	
+	public int myPosition;//我的位置  	
 	public int sbPosition;//小盲位
 	public int bbPosition;//大盲位
+	
+	public int handPower;
 	
 	public int potSize;
 	public int BB;//大盲金额
 	public int callCost;//call需要花费的赌注
 	public int raiseCost;//raise需要花费的赌注
 	public int myRestJetton;
+	public int myBet;//已经下注多少
+	
 	public boolean not_already_voluntarily_put_money = true; //字面意思
-	
-	
 }
 

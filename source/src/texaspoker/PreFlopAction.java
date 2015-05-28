@@ -92,10 +92,10 @@ public class PreFlopAction {
 		
 
 		if (IR>=thresh[MAKE4])
-			strategy = "raise"+ state.BB;
+			strategy = "raise "+ state.BB;
 		else if (IR>=thresh[MAKE2]){
 			if(state.callCost>state.BB) strategy = "call";
-			else  strategy = "raise" + state.BB;
+			else  strategy = "raise " + state.BB;
 		}
 		else if (IR>=thresh[MAKE1]){
 			if(state.myPositin!=state.sbPosition&&state.myPositin!=state.bbPosition){
